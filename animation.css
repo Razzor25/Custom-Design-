@@ -1,0 +1,81 @@
+.animation{
+    position:absolute;
+    top: 0;
+    left: 0;
+
+    margin: 0;
+    padding: 0;
+  
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    width: 500px;
+    height: 100px;
+  box-sizing: border-box;
+  }
+  
+  h2{
+  
+      position: relative;
+      font-size: 2vw;
+      color:rgb(46, 168, 62);
+      -webkit-text-stroke: 0.03vw;
+      text-transform: uppercase;
+  
+  
+  
+  }
+  h2::after
+  {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      color: #FF9933;
+      -webkit-text-stroke: 0 #4f856e;
+      border-right: 200px solid;
+      border-color: rgba(241, 7, 7,0 );
+      overflow:hidden;
+      animation: safron 5s linear infinite;
+  } 
+  h2::before
+  {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      color:white;
+      -webkit-text-stroke: 0 #4f856e;
+      border-right: 200px solid;
+      border-color: rgba(241, 7, 7,0 );
+      overflow:hidden;
+      animation: white 5s linear infinite;
+  }
+ 
+  @keyframes white {
+    0%
+    {
+      width: 30%;
+    }
+   10%,20%,30%
+    {
+      width: 70%;
+    }
+  
+  }
+  @keyframes safron
+  {
+      0%,10%,20%
+      {
+          width: 0;
+      }
+      10%,20%,30%
+      {
+        width: 30%;
+      }
+  }
+ 
